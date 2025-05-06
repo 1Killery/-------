@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=3 uid="uid://dmc6q86b8qbc2"]
+
+[ext_resource type="Texture2D" uid="uid://bq5crocjehk18" path="res://новое(1).png" id="1_f50pn"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ij6vw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ghijl"]
+atlas = ExtResource("1_f50pn")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_44cfe"]
+atlas = ExtResource("1_f50pn")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dd465"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ghijl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_44cfe")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 2.0
+}]
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_ij6vw")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_dd465")
+animation = &"idle"
+frame = 1
+frame_progress = 0.816666
