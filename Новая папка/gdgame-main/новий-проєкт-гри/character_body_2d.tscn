@@ -36,3 +36,7 @@ sprite_frames = SubResource("SpriteFrames_dd465")
 animation = &"idle"
 frame = 1
 frame_progress = 0.816666
+
+[node name="Новое(1)" type="Sprite2D" parent="."]
+position = Vector2(119, 1)
+texture = ExtResource("1_f50pn")
