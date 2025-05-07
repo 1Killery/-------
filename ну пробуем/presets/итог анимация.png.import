@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/итог анимация.png-d31ced32a52b1a34383866c5441d3771.stex"
+path="res://.import/итог анимация.png-5a4a50ebc0ec4877807c33366a377d64.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://итог анимация.png"
-dest_files=[ "res://.import/итог анимация.png-d31ced32a52b1a34383866c5441d3771.stex" ]
+source_file="res://presets/итог анимация.png"
+dest_files=[ "res://.import/итог анимация.png-5a4a50ebc0ec4877807c33366a377d64.stex" ]
 
 [params]
 
