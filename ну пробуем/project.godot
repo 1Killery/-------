@@ -11,11 +11,16 @@ config_version=4
 [application]
 
 config/name="Save Amelie"
+run/main_scene="res://scens/main.tscn"
 config/icon="res://presets/icon.png"
 
 [autoload]
 
 Main="*res://scens/main.tscn"
+
+[display]
+
+window/size/fullscreen=true
 
 [gui]
 
