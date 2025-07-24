@@ -37,5 +37,10 @@ position = Vector2( -2, -17 )
 shape = SubResource( 4 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
-scale = Vector2( 3.64, 1 )
+position = Vector2( -2, -18 )
+scale = Vector2( 7.07942, 2.34758 )
 zoom = Vector2( 0.5, 0.5 )
+limit_left = 0
+limit_top = -58
+limit_right = 75
+limit_bottom = 0
