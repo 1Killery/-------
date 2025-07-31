@@ -1,11 +1,13 @@
 extends KinematicBody2D
 
 enum {
-	IDLE
+	IDLE,
 	RUN,
 	ATTACK,
 	HIT,
 	DEAD,
+	DOUBLE_ATTACK,
+	BLOCK
 	
 	
 }
@@ -22,6 +24,7 @@ var health = 100
 func _ready():
 	anim_sprait.play("idle")
 
+# warning-ignore:unused_argument
 func _physics_process(delta):
 	if health <= 0 :
 		health = 0
@@ -34,14 +37,15 @@ func _physics_process(delta):
 #			attack()
 #		"HIT":
 #			hit_state()
-#		"DEAD":
-#			dead()
+		"DEAD":
+			dead()
 #
 	
 	
 	
 	run()
 	update_anim()
+	dead()
 
 func update_anim() : 
 	if velocity:
@@ -67,4 +71,10 @@ func run():
 	if Input.is_action_pressed("up"):
 		velocity.y -= speed
 	velocity = velocity.normalized() * speed
+# warning-ignore:return_value_discarded
 	move_and_slide(velocity)
+	
+func dead():
+	health <= 0 
+	health = 0
+	animp.play("dead")
