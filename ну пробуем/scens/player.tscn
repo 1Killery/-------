@@ -111,14 +111,14 @@ animations = [ {
 "speed": 5.0
 }, {
 "frames": [ SubResource( 31 ), SubResource( 32 ), SubResource( 33 ) ],
-"loop": true,
+"loop": false,
 "name": "block",
 "speed": 10.0
 }, {
 "frames": [ SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ) ],
-"loop": true,
+"loop": false,
 "name": "dead",
-"speed": 10.0
+"speed": 3.0
 }, {
 "frames": [ SubResource( 21 ), SubResource( 22 ), SubResource( 23 ), SubResource( 24 ) ],
 "loop": true,
@@ -138,7 +138,7 @@ animations = [ {
 "frames": [ SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ) ],
 "loop": true,
 "name": "run",
-"speed": 1.0
+"speed": 7.0
 } ]
 
 [sub_resource type="CapsuleShape2D" id=4]
@@ -174,7 +174,6 @@ tracks/1/keys = {
 }
 
 [sub_resource type="Animation" id=34]
-loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("AnimatedSprite:frame")
 tracks/0/interp = 1
@@ -202,7 +201,6 @@ tracks/1/keys = {
 
 [sub_resource type="Animation" id=26]
 length = 0.8
-loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("AnimatedSprite:frame")
 tracks/0/interp = 1
@@ -345,7 +343,8 @@ script = ExtResource( 2 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 0, -19 )
 frames = SubResource( 3 )
-animation = "double attack"
+animation = "block"
+frame = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -2, -17 )
