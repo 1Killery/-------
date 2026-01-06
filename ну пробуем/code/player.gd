@@ -1,7 +1,6 @@
 extends KinematicBody2D
 
 enum {
-	RUN,
 	ATTACK,
 	DOUBLE_ATTACK,
 	HIT,
@@ -72,9 +71,9 @@ func run():
 	if Input.is_action_pressed("block"):
 		state = BLOCK
 # warning-ignore:return_value_discarded
-
+	else:
+		$AnimatedSprite.stop()
 func block():
 	animp.play("block")
 	yield(animp, "animation_finished")
-	state = RUN
 	
